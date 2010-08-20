@@ -497,10 +497,11 @@ describe "a 3d pie chart" do
     Gchart.pie_3d(:title => @title, :legend => @legend, :data => @data).include?('cht=p3').should be_true
   end
 
-  it "should be able to set labels by using the legend or labesl accessor" do
-    Gchart.pie_3d(:title => @title, :legend => @legend, :data => @data).should include("chl=#{@jstized_legend}")
+  it "should be able to set labels by using labels accessor" do
     Gchart.pie_3d(:title => @title, :labels => @legend, :data => @data).should include("chl=#{@jstized_legend}")
-    Gchart.pie_3d(:title => @title, :labels => @legend, :data => @data).should == Gchart.pie_3d(:title => @title, :legend => @legend, :data => @data)
+  end
+  it "should be able to set legends by using legends accessor" do
+    Gchart.pie_3d(:title => @title, :legend => @legend, :data => @data).should include("chdl=#{@jstized_legend}")
   end
 
 end

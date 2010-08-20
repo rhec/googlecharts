@@ -155,15 +155,19 @@ And use the standard method signature to use your own theme:
 Legend & Labels
 -------------
 
-You probably will want to use a legend or labels for your graph.
+You probably will want to use a legend and/or labels for your graph.
 
     Gchart.line(:legend => 'legend label')
 or
     Gchart.line(:legend => ['legend label 1', 'legend label 2'])
     
-Will do the trick. You can also use the labels alias (makes more sense when using the pie charts)
+Will do the trick. 
+
+You can also use the labels option which produces callouts (often used for pie charts)
 
     chart = Gchart.pie(:labels => ['label 1', 'label 2'])
+
+You can also combine the two if you wish
 
 Multiple axis labels 
 -------------
